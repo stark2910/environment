@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environment Awareness in India</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .hidden {
+            display: none;
+        }
+        header, nav, .section, footer {
+            display: none;
+        }
+        #captcha-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #d8f3dc;
+            flex-direction: column;
+        }
+        #captcha-box {
+            background-color: white;
+            padding: 20px 40px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+        #captcha-box input {
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        #captcha-box button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #2d6a4f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        nav {
+            background-color: #40916c;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .section h2 {
+            margin-bottom: 20px;
+            color: #1b4332;
+        }
+        .section img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        footer {
+            background-color: #2d6a4f;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="captcha-container">
+        <div id="captcha-box">
+            <h2>Verify to Access the Website</h2>
+            <p id="captcha-question"></p>
+            <input type="text" id="captcha-input" placeholder="Your Answer">
+            <button onclick="checkCaptcha()">Submit</button>
+        </div>
+    </div>
+
+    <header>
+        <h1>🌱 Environment Awareness in India</h1>
+        <p>Empowering citizens to protect and nurture Mother Earth</p>
+    </header>
+
+    <nav>
+        <a href="#pollution">Pollution</a>
+        <a href="#deforestation">Deforestation</a>
+        <a href="#renewable">Renewable Energy</a>
+        <a href="#initiatives">Indian Initiatives</a>
+        <a href="#climate">Climate Change</a>
+        <a href="#recycling">Waste Management</a>
+    </nav>
+
+    <div class="section" id="pollution">
+        <h2>Air & Water Pollution in India</h2>
+        <img src="https://images.unsplash.com/photo-1604480134218-6b5c90b1c5b3?fit=crop&w=800&q=80" alt="Pollution in India">
+        <p>Pollution, especially in urban areas like Delhi, has reached alarming levels. The air quality index often exceeds safe limits, impacting health. Industrial discharge and untreated sewage pollute rivers like the Ganga and Yamuna, posing environmental and public health risks.</p>
+    </div>
+
+    <div class="section" id="deforestation">
+        <h2>Deforestation and Wildlife</h2>
+        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?fit=crop&w=800&q=80" alt="Deforestation in India">
+        <p>India's forests are under constant threat due to urban expansion, illegal logging, and agriculture. This has led to habitat loss for countless species. Awareness and forest protection laws are critical to preserve our biodiversity.</p>
+    </div>
+
+    <div class="section" id="renewable">
+        <h2>Renewable Energy & Sustainability</h2>
+        <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?fit=crop&w=800&q=80" alt="Renewable Energy in India">
+        <p>India is embracing renewable energy with solar and wind power leading the way. Government initiatives like the International Solar Alliance aim to reduce dependence on fossil fuels and combat climate change.</p>
+    </div>
+
+    <div class="section" id="initiatives">
+        <h2>Government and NGO Initiatives</h2>
+        <img src="https://images.unsplash.com/photo-1564869734237-6245b707d78e?fit=crop&w=800&q=80" alt="Indian Environmental Initiatives">
+        <p>Programs like Swachh Bharat Abhiyan, Namami Gange, and National Electric Mobility Mission are efforts to promote sustainability. NGOs are also playing a vital role in educating citizens and restoring natural habitats.</p>
+    </div>
+
+    <div class="section" id="climate">
+        <h2>Climate Change in India</h2>
+        <img src="https://images.unsplash.com/photo-1524085329727-16bb66c818b5?fit=crop&w=800&q=80" alt="Climate Change India">
+        <p>Climate change has led to extreme weather conditions in India, from floods to droughts. Coastal regions face rising sea levels. Sustainable practices and strong climate policies are needed urgently.</p>
+    </div>
+
+    <div class="section" id="recycling">
+        <h2>Waste Management and Recycling</h2>
+        <img src="https://images.unsplash.com/photo-1581579185169-8a5af17f7c6d?fit=crop&w=800&q=80" alt="Waste Management India">
+        <p>With increasing urbanization, waste management has become a major concern. Cities like Pune and Bengaluru are adopting innovative recycling and waste segregation practices to tackle the garbage crisis.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Environment India | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        const a = Math.floor(Math.random() * 10);
+        const b = Math.floor(Math.random() * 10);
+        const correctAnswer = a + b;
+        document.getElementById("captcha-question").innerText = `What is ${a} + ${b}?`;
+
+        function checkCaptcha() {
+            const userAnswer = parseInt(document.getElementById("captcha-input").value);
+            if (userAnswer === correctAnswer) {
+                document.getElementById("captcha-container").style.display = 'none';
+                document.querySelector("header").style.display = 'block';
+                document.querySelector("nav").style.display = 'block';
+                document.querySelectorAll(".section").forEach(section => section.style.display = 'block');
+                document.querySelector("footer").style.display = 'block';
+            } else {
+                alert("Incorrect answer. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>
